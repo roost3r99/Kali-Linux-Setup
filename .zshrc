@@ -83,7 +83,7 @@ plugins=(
   vscode 
   command-not-found 
   common-aliases
-  zsh-siddicky
+  zsh-roost3r
 #   zsh-vi-mode
   fast-syntax-highlighting
   tmux
