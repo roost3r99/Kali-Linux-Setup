@@ -1,53 +1,79 @@
-# Config files
+# 🧩 Config Files
 
-## Dependencies
-
-- Alacritty
-- Tmux
-- tpm
-- Oh-my-zsh
-- zsh-autosuggestions (oh-my-zsh plugin)
-- True Color (24-bit)
+Custom configuration setup for **Zsh**, **Oh My Zsh**, **Alacritty**, and **Tmux** — optimized for a clean, modern Linux workflow with support for custom themes and 24-bit colors.
 
 ---
 
-## Links and Resources
+## 🛠️ Dependencies
 
-- [Alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)
-  _Make sure to install the required dependencies and follow the directions for zsh completions post build_
+- Alacritty  
+- Tmux  
+- TPM (Tmux Plugin Manager)  
+- Oh My Zsh  
+- Zsh-autosuggestions (Oh My Zsh plugin)  
+- True Color (24-bit terminal support)  
+- Nerd Font (recommended: Hack Nerd Font)
 
-- [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+---
+
+## 🔗 Links and Resources
+
+- [Alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md)  
+  _Make sure to install the required dependencies and follow directions for Zsh completions post build._
+
+- [Tmux Plugin Manager (TPM)](https://github.com/tmux-plugins/tpm)
 
 - [Oh My Zsh](https://ohmyz.sh)
 
-- [Zsh Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+- [Zsh Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
-- [True Color](https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6)
+- [True Color (24-bit test)](https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6)
 
-**Once installed simply copy all the files to your home directory.**
+- [Hack Nerd Font](https://www.nerdfonts.com/font-downloads)
 
----
-
-## Notes
-
-Tmux
-
-- Use `Prefix + E` in tmux to send the command to all windows in current session.
-- Use `Shift + arrow keys` to navigate windows.
-- Use `Ctrl|Shift + arrow keys` to navigate panes.
+**Once installed, simply copy all the configuration files to your home directory.**
 
 ---
 
-## Example
+## 🧰 Configuration Files Overview
 
-![Alt text](images/custom-config-ubuntu.png?raw=true "Ubuntu")
-_This is using oh-my-posh_
+| File | Path | Description |
+|------|------|--------------|
+| `.zshrc` | `~/.zshrc` | Main Zsh configuration file |
+| `roost3r.zsh-theme` | `~/.oh-my-zsh/themes/` | Custom Oh My Zsh theme |
+| `zsh-roost3r.plugin.zsh` | `~/.oh-my-zsh/plugins/zsh-roost3r/` | Custom plugin and aliases |
+| `alacritty.toml` | `~/.config/alacritty/` | Alacritty terminal configuration |
+| `tmux.conf` | `~/.tmux.conf` | Tmux configuration file |
+| `vpn.sh` | `/opt/vpn.sh` | Script to check and display VPN IP (used in Polybar/i3) |
 
 ---
 
-## Kali i3-gaps
+## 🧠 Notes
 
-Config preview on Kali i3-gaps
-![Alt tex](images/kali-i3-gaps.png?raw=true "Kali i3-gaps")
-_This is using oh-my-posh_
-[Arszilla / Kali i3-gaps](https://gitlab.com/Arszilla/kali_i3-gaps)
+### 🌀 Zsh / Oh My Zsh
+
+- Theme: `roost3r`
+- Plugins: `git`, `fzf`, `zsh-autosuggestions`, `zsh-roost3r`
+- Font: `Hack Nerd Font`
+- True Color: Enabled
+
+### 🧱 Tmux
+
+- Use `Prefix + E` to send a command to all panes in the current session.  
+- Use `Shift + arrow keys` to navigate **windows**.  
+- Use `Ctrl + Shift + arrow keys` to navigate **panes**.  
+- Managed by **TPM (Tmux Plugin Manager)**.
+
+### 🖥️ Alacritty
+
+- Transparent background and padding for minimal look.  
+- Font set to **Hack Nerd Font**.  
+- Colors follow a dark pastel palette optimized for Zsh & i3-gaps.
+
+### 🔒 VPN Script
+
+- File: `/opt/vpn.sh`  
+- Displays VPN IP when active (for Polybar or terminal output).  
+- Make it executable:  
+  ```bash
+  sudo chmod +x /opt/vpn.sh
