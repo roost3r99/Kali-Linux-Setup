@@ -1,0 +1,27 @@
+# Default colors
+[colors.primary]
+background = '#141d2b' # base
+foreground = '#ffffff' # text
+
+[colors.vi_mode_cursor]
+text = 'CellBackground'
+cursor = 'CellForeground'
+
+[colors.selection]
+text = 'CellBackground'
+background = 'CellForeground'
+
+[colors.normal]
+black = '#141d2b' # surface1
+red = '#ff3e3e' # red
+green = '#9fef00' # green
+yellow = '#ffaf00' # yellow
+blue = '#0086ff' # blue
+magenta = '#9f00ff' # pink
+cyan = '#2ee7b6' # teal
+white = '#a4b1cd' # subtext1
+
+
+[font]
+# Point size
+size = 16.0
