@@ -198,3 +198,16 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# Add a blank line only between prompts, not on first load or after 'clear'
+LAST_COMMAND=""
+precmd() {
+  # Skip printing an empty line on the very first prompt or after 'clear'
+  if [[ -n "$LAST_COMMAND" && "$LAST_COMMAND" != "clear" ]]; then
+    echo
+  fi
+}
+
+preexec() {
+  LAST_COMMAND=$1
+}
